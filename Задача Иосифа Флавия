@@ -1,0 +1,10 @@
+N = int(input())  # количество людей
+k = int(input())  # счёт
+
+def josephus(N, k):
+    result = 0  # начальная позиция (0)
+    for i in range(1, N + 1):
+        result = (result + k) % i
+    return result + 1  # возвращаем результат в 1-индексации
+
+print(josephus(N, k))
